@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
+  resources :news
   resources :posts
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  root to: 'posts#index'
+  root to: 'news#index'
 end
