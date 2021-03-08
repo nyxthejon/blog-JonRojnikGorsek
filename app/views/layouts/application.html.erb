@@ -12,10 +12,7 @@
 
   <body>
     <div class="navbar">
-      <%= link_to "Domov" , root_path %>
-      <%= link_to "Prijava" , new_user_session_path %>
-      <%= link_to "Registracija" , new_user_registration_path %>
-      <%= link_to "Odjava" , destroy_user_session_path, method: :delete%>
+      <%= display_navbar_options %>
     </div>
 
     <p class="alert"><%= alert %></p>

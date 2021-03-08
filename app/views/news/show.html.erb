@@ -15,5 +15,4 @@
   <%= @news.user.email %>
 </p>
 
-<%= link_to 'Edit', edit_news_path(@news) %> |
-<%= link_to 'Back', news_index_path %>
+<%= display_news_show_links(@news) %> 

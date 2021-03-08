@@ -19,9 +19,7 @@
         <td><%= news.body %></td>
         <td><%= news.user.email %></td>
 
-        <td><%= link_to 'Show', news %></td>
-        <td><%= link_to 'Edit', edit_news_path(news) %></td>
-        <td><%= link_to 'Destroy', news, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <%= display_news_links(news) %>
       </tr>
     <% end %>
   </tbody>
