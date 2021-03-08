@@ -1,18 +1,21 @@
 <p id="notice"><%= notice %></p>
+<main role="main" class="inner cover">
 
-<p>
-  <strong>Title:</strong>
+
+
+  <h1 class="cover-heading">
   <%= @news.title %>
-</p>
+  </h1>
 
-<p>
-  <strong>Body:</strong>
+
+<p class="lead">
   <%= @news.body %>
 </p>
 
 <p>
-  <strong>Author:</strong>
+  <strong>Avtor:</strong>
   <%= @news.user.name || 'Anonimna oseba' %>
 </p>
 
 <%= display_news_show_links(@news) %>
+  </main>

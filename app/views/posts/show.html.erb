@@ -1,12 +1,13 @@
 <p id="notice"><%= notice %></p>
+<main role="main" class="inner cover">
 
-<p>
-  <strong>Title:</strong>
+  <h1 class="cover-heading">
   <%= @post.title %>
-</p>
+  </h1>
 
-<p>
-  <strong>Body:</strong>
+
+
+<p class="lead">
   <%= @post.body %>
 </p>
 
@@ -16,3 +17,4 @@
 </p>
 
 <%= display_posts_show_links(@post) %>
+</main>
