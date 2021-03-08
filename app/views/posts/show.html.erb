@@ -1,4 +1,4 @@
-
+<p id="notice"><%= notice %></p>
 
 <p>
   <strong>Title:</strong>
@@ -10,5 +10,9 @@
   <%= @post.body %>
 </p>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<p>
+  <strong>Author:</strong>
+  <%= @post.user.name || 'Anonimna oseba' %>
+</p>
+
+<%= display_posts_show_links(@post) %>

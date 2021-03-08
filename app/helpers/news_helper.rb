@@ -13,7 +13,7 @@ module NewsHelper
       html += link_to 'Izbriši', news, method: :delete, data: { confirm: 'Are you sure?' }
       html += ' | '
     end
-    html += link_to 'Back', news_index_path
+    html += link_to 'Nazaj', news_index_path
     html.html_safe
   end
 end
