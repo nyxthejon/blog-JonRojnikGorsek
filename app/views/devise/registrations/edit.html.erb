@@ -1,15 +1,16 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<div class = "form">
+<h1 class= "h3 mb-3 font-weight-normal">Uredi Uporabnika</h1>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
-    <%= f.label :e_naslov %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <label for="inputEmail" class="visually-hidden">E-naslov</label>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
   </div>
   <div class="field">
-    <%= f.label :Ime %><br />
-    <%= f.text_field :name, autocomplete: 'name' %>
+    <label for="inputIme" class="visually-hidden">Ime</label>
+    <%= f.text_field :name, autocomplete: 'name' ,class: "form-control" %>
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -17,31 +18,30 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :geslo %> <i>(Pustite prazno ce ne zelite spremeniti)</i><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+    <label for="inputPassword" class="visually-hidden">Geslo</label>
     <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> Znakov minimalno</em>
+
+      <em>(<%= @minimum_password_length %> Znakov minimalno)</em>
     <% end %>
+    <%= f.password_field :password, autocomplete: "new-password" , class: "form-control"%>
   </div>
 
   <div class="field">
-    <%= f.label :Potrdi_geslo %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+      <label for="inputPassword" class="visually-hidden">Potrdi Geslo</label>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" , class: "form-control" %>
   </div>
 
   <div class="field">
-    <%= f.label :trenutno_geslo %> <i>(Potrebujemo vase trenutno geslo za potrditev sprememb)</i><br />
-    <%= f.password_field :current_password, autocomplete: "current-password" %>
+    <label for="inputPassword" class="visually-hidden">Trenutno Geslo</label>
+    <%= f.password_field :current_password, autocomplete: "current-password" , class: "form-control" %>
   </div>
-
-  <div class="actions">
-    <%= f.submit "Update" %>
-  </div>
+<br>
+  <button type = "submit" class="btn btn-lg btn-primary btn-block">
+   Posodobitev
+    </button>
 <% end %>
-
-<h3>Izbris Računa</h3>
-
-<p>Unhappy? <%= button_to "Izbris racuna", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
+<br>
+<h1 class= "h3 mb-3 font-weight-normal">Izbris Računa</h1>
+<%= button_to "Izbris racuna", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete , class: "btn btn-lg btn-secondary btn-block"%>
+<br>
+<%= link_to "Nazaj", :back, class: "btn btn-lg btn-secondary btn-block" %>

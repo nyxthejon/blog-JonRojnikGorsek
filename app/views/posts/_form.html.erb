@@ -12,16 +12,16 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+        <label for="inputTitle" class="visually-hidden">Ime Posta</label>
+    <%= form.text_field :title , class: "form-control"%>
   </div>
 
   <div class="field">
-    <%= form.label :body %>
-    <%= form.text_area :body %>
+        <label for="inputTitle" class="visually-hidden">Vsebina</label>
+    <%= form.text_area :body , class: "form-control" %>
   </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+<br>
+  <button type = "submit" class="btn btn-lg btn-primary btn-block">
+  Objavi
+    </button>
 <% end %>

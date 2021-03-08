@@ -1,7 +1,7 @@
 module ApplicationHelper
   def display_navbar_options
       html = ""
-      unless !current_page?(root_path)
+      unless current_page?(posts_path)
         html += link_to "Posts", posts_path, class: 'btn btn-sm btn-outline-secondary'
       end
       if user_signed_in?
