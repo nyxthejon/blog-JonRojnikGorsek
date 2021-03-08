@@ -4,20 +4,25 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :E_naslov %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
   <div class="field">
-    <%= f.label :password %>
+    <%= f.label :Ime %><br />
+    <%= f.text_field :name, autocomplete: 'name' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Geslo %>
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <em>(<%= @minimum_password_length %> znakov minimum)</em>
     <% end %><br />
     <%= f.password_field :password, autocomplete: "new-password" %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label :Potrdi_geslo %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 

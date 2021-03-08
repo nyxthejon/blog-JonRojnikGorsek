@@ -12,7 +12,7 @@
 
 <p>
   <strong>Author:</strong>
-  <%= @news.user.email %>
+  <%= @news.user.name || 'Anonimna oseba' %>
 </p>
 
-<%= display_news_show_links(@news) %> 
+<%= display_news_show_links(@news) %>

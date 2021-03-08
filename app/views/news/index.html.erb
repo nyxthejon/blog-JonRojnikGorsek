@@ -17,7 +17,7 @@
       <tr>
         <td><%= news.title %></td>
         <td><%= news.body %></td>
-        <td><%= news.user.email %></td>
+        <td><%= news.user.name || 'Anonimna oseba' %></td>
 
       <%= display_news_links(news) %>
       </tr>
